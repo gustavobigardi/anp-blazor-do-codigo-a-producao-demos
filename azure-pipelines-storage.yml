@@ -16,7 +16,7 @@ trigger:
       - src/BlazorWasmStorage/*
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 variables:
   buildConfiguration: 'Release'
