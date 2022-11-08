@@ -51,7 +51,7 @@ steps:
   - task: AzureFileCopy@3
     displayName: 'Deploy AzureBlob'
     inputs:
-      SourcePath: '$(build.artifactstagingdirectory)/wwwroot'
+      SourcePath: '$(build.artifactstagingdirectory)/BlazorWasmStorage/wwwroot'
       azureSubscription: ANPBlazorAzure
       Destination: AzureBlob
       storage: blazorstorageanp
