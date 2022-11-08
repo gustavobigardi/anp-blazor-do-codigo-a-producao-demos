@@ -45,13 +45,13 @@ steps:
     inputs:
       command: 'publish'
       projects: '**/BlazorWasmStorage.csproj'
-      publishWebProjects: false
+      publishWebProjects: true
       arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
 
   - task: AzureFileCopy@3
     displayName: 'Deploy AzureBlob'
     inputs:
-      SourcePath: '$(build.artifactstagingdirectory)/BlazorWasmStorage/wwwroot'
+      SourcePath: '$(build.artifactstagingdirectory)/BlazorWasmStorage/wwwroot/'
       azureSubscription: ANPBlazorAzure
       Destination: AzureBlob
       storage: blazorstorageanp
