@@ -45,8 +45,9 @@ steps:
     inputs:
       command: 'publish'
       projects: '**/BlazorWasmStorage.csproj'
-      publishWebProjects: false
       arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
+      publishWebProjects: false
+      zipAfterPublish: false
 
   - task: AzureCLI@2
     displayName: 'Azure CDN Cache '
