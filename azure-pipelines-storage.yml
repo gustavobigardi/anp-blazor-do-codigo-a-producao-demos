@@ -65,4 +65,4 @@ steps:
       azureSubscription: ANPBlazorAzure
       scriptType: ps
       scriptLocation: inlineScript
-      inlineScript: 'az cdn endpoint purge -g ANP_Blazor -n blazor-static-anp --profile-name blazor-static-anp --content-paths "/*'
+      inlineScript: 'az cdn endpoint purge -g ANP_Blazor -n blazor-static-anp --profile-name blazor-static-anp --content-paths "/*"'
