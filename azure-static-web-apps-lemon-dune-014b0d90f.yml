@@ -4,10 +4,16 @@ pr:
   branches:
     include:
       - main
+  paths:
+    include:
+      - src/BlazorWasmSWA/*
 trigger:
   branches:
     include:
       - main
+  paths:
+    include:
+      - src/BlazorWasmSWA/*
 
 jobs:
 - job: build_and_deploy_job
