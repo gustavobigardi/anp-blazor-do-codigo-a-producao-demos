@@ -19,6 +19,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHosted.Server", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHosted.Client", "src\BlazorHosted\Client\BlazorHosted.Client.csproj", "{FD094855-834B-464A-806F-3FB9E66C5322}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pipelines", "pipelines", "{74D9BD43-6506-4F11-947F-79CBA0A5B2D2}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines-docker.yml = azure-pipelines-docker.yml
+		azure-pipelines-hosted.yml = azure-pipelines-hosted.yml
+		azure-pipelines-storage.yml = azure-pipelines-storage.yml
+		azure-static-web-apps-lemon-dune-014b0d90f.yml = azure-static-web-apps-lemon-dune-014b0d90f.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "configs", "configs", "{7E9C410F-0D25-483D-BD46-3BABDB485456}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
