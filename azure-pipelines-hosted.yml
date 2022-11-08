@@ -46,7 +46,7 @@ steps:
       command: 'publish'
       projects: '**/BlazorHosted.Server.csproj'
       arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
-      publishWebProjects: true
+      publishWebProjects: false
 
   - task: AzureWebApp@1
     inputs:
