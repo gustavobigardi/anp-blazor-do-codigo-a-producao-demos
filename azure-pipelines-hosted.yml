@@ -1,0 +1,55 @@
+name: Web App ASP.NET Hosted CI/CD
+
+pr:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - src/BlazorHosted/*
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - src/BlazorHosted/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+  - task: UseDotNet@2
+    displayName: 'Use DotNet 6'
+    inputs:
+      version: '6.0.300'
+
+  - task: DotNetCoreCLI@2
+    displayName: Restore
+    inputs:
+      command: 'restore'
+      projects: '**/BlazorHosted.Server.csproj'
+
+  - task: DotNetCoreCLI@2
+    displayName: Build
+    inputs:
+      command: 'build'
+      projects: '**/BlazorHosted.Server.csproj'
+      arguments: '--configuration $(BuildConfiguration)'
+
+  - task: DotNetCoreCLI@2
+    displayName: Publish
+    inputs:
+      command: 'publish'
+      projects: '**/BlazorHosted.Server.csproj'
+      arguments: '--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)'
+      publishWebProjects: true
+
+  - task: AzureWebApp@1
+    inputs:
+      azureSubscription: ANPBlazorAzure
+      appName: 'blazoranp'
+      package: '$(Build.ArtifactStagingDirectory)/**/*.zip'

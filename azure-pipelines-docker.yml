@@ -1,4 +1,4 @@
-name: Storage CDN CI/CD
+name: Docker CI/CD
 
 pr:
   branches:
