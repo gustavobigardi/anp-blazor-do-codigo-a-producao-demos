@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasmSWA", "src\Blazor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasmStorage", "src\BlazorWasmStorage\BlazorWasmStorage.csproj", "{3E146783-0D5F-4B44-87CE-7953E9B0C9E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasmDocker", "src\BlazorWasmDocker\BlazorWasmDocker.csproj", "{45976B8A-3390-4413-B49C-7FF1B1F7E315}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,9 +28,14 @@ Global
 		{3E146783-0D5F-4B44-87CE-7953E9B0C9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E146783-0D5F-4B44-87CE-7953E9B0C9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E146783-0D5F-4B44-87CE-7953E9B0C9E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45976B8A-3390-4413-B49C-7FF1B1F7E315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45976B8A-3390-4413-B49C-7FF1B1F7E315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45976B8A-3390-4413-B49C-7FF1B1F7E315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45976B8A-3390-4413-B49C-7FF1B1F7E315}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{904F65ED-04BA-4B14-93DE-32881BF3842F} = {574D7640-1297-4542-85FE-E6A9FBB91CA5}
 		{3E146783-0D5F-4B44-87CE-7953E9B0C9E8} = {574D7640-1297-4542-85FE-E6A9FBB91CA5}
+		{45976B8A-3390-4413-B49C-7FF1B1F7E315} = {574D7640-1297-4542-85FE-E6A9FBB91CA5}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,40 @@
+name: Storage CDN CI/CD
+
+pr:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - src/BlazorWasmStorage/*
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - src/BlazorWasmStorage/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  tag: '$(Build.BuildId)'
+
+stages:
+- stage: Build
+  displayName: Build Image
+  jobs:
+  - job: Build
+    displayName: Build
+    steps:
+    - task: Docker@2
+      displayName: Build and image
+      inputs:
+        command: buildAndPush
+        repository: demos/BlazorWasmDocker
+        dockerfile: '**/BlazorWasmDocker/Dockerfile'
+        containerRegistry: DockerRegistry
+        tags: |
+          $(tag)
+          lastest
